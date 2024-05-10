@@ -16,7 +16,12 @@ To start, we go through each cell in the board and if the program detects that t
 One final check is wether or not that this puzzle is solvable or not. To do this, the program simply does a check of all cells in the board path, the ones that we know are empty and needs to be solved, and see the length of the list of possible answers. If it finds a empty cell with no possible answers, then the puzzle is automatically flagged as unsolveable.
 
 ## Actually Solving Sudoku (solve)
-TO DO
+A more detailed explanation of the Simple Sudoku Algorithm would be that it uses backtracking. It does this by using the initialised calculations above (row_ele, row_col, square) as well as "possible" which is a list that contains integers from 1 - 9.
+Firstly, we will create a new list called "possible" which will consist of all possible elements that are not present in "row_ele", "row_col", and "square". The list will then be sorted for ease.
+The algorithm then checks the length of queue.marked (which contains a list of marked numbers. If the length is longer than 0, we update the "possible" list to contain only numbers that are greater than the maximum marked value.
+We then reset the queue.marked to become an empty list, so it is ready for the next state.
+If the length is equal to 0 then the sudoku is unsolvable.
+
 
 # Summary/TLDR
 This program can solve any solveable Sudoku puzzle by checking for the possible answers in each empty cell and trying them out. If intially before actually solving the puzzle that there is no possible answer for a cell, then the program will stop and say that it is not solveable. If there is at least 1 possible solvable answer for each cell, it will go to each empty cell and using the first possible answer for that cell, It will then move on until there is no possible answer for that cell or get to the end. If there is no possible answer, then it will traverse back and choose the next possible answer and so on.
