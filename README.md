@@ -2,6 +2,12 @@
 
 This program solves Sudoku puzzles automatically or tells you if it is unsolvable. The user is able to input any standard Sudoku puzzle and this program can solve it.
 
+## By
+Burin Intachuen 6480250\
+Possathorn Sujipisut 6480274\
+Tanakorn Mankhetwit 6480282\
+Mhadhanagual Charoenphon 6391199
+
 # How It Works
 ## Setup (init)
 First off, we make a Cell class to keep track of each cell's position, value, and other useful variables. 
